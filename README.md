@@ -1,0 +1,1 @@
+#Add words by adding them to the JSON array in src/ord.json

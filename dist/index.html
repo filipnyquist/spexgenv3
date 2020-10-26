@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Getting Started</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/4.0/examples/cover/cover.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">SpexGen</h3>
+          <nav class="nav nav-masthead justify-content-center">
+          </nav>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Här får du ett par ord!</h1>
+        <p class="lead" id="w1"></p>
+        <p class="lead" id="w2"></p>
+        <p class="lead" id="w3"></p>
+        <p class="lead">
+          <button type="button" class="btn btn-lg btn-secondary">Generera nya ord</button>
+        </p>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Spexgen V3, by <a href="https://twitter.com/mdo">@Mustard</a> and <a href="https://twitter.com/mdo">@Mr.Mime</a>.</p>
+        </div>
+      </footer>
+    </div>
+    <script src="main.js"></script>
+    <script>
+      //Run some words the first time!
+      let w = genWords(3);
+      $("#w1").text(w[0]);
+      $("#w2").text(w[1]);
+      $("#w3").text(w[2]);
+      //Allow for reroll of words!
+    $("button").click(function(){
+      let w = genWords(3);
+      $("#w1").text(w[0]);
+      $("#w2").text(w[1]);
+      $("#w3").text(w[2]);
+    }); </script>
+  </body>
+</html>
